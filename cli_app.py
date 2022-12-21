@@ -30,11 +30,8 @@ def get_http_data(str_lst):
             data_json = {i: link_meth}
             print(data_json)
         else:
-            print("строка ", i, " не является ссылкой ")
-
-def main():
-    str_lst = make_str_list()
-    get_http_data(str_lst)
+            print("строка",i,"не является ссылкой ")
 
 
-#main()
+str_lst = make_str_list()
+get_http_data(str_lst)
