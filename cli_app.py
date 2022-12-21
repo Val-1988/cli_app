@@ -1,9 +1,6 @@
 import requests
 import urlextract
 
-str_list = ["1", "stroka", "link", "https://python-poetry.org/docs/#installing-with-the-official-installer", "abc",
-            "https://career.habr.com/vacancies?type=suitable", "https://github.com/"]
-
 
 def make_str_list():
     str_lst = []
@@ -11,7 +8,6 @@ def make_str_list():
         user_str = str(input("enter link, to finish enter 0 "))
         if user_str != "0":
             str_lst.append(user_str)
-            print(str_lst)
         else:
             break
     return str_lst
@@ -30,7 +26,7 @@ def get_http_data(str_lst):
             data_json = {i: link_meth}
             print(data_json)
         else:
-            print("строка",i,"не является ссылкой ")
+            print("string", i, "is not a link")
 
 
 str_lst = make_str_list()
